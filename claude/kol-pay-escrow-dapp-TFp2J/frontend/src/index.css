@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-950 text-gray-100 font-mono;
+  }
+
+  * {
+    @apply box-border;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-neon text-gray-950 font-bold py-3 px-6 rounded-lg hover:opacity-90 active:scale-95 transition-all duration-150 disabled:opacity-40 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply border border-neon text-neon font-semibold py-3 px-6 rounded-lg hover:bg-neon/10 active:scale-95 transition-all duration-150 disabled:opacity-40 disabled:cursor-not-allowed;
+  }
+
+  .btn-danger {
+    @apply border border-red-500 text-red-400 font-semibold py-3 px-6 rounded-lg hover:bg-red-500/10 active:scale-95 transition-all duration-150 disabled:opacity-40 disabled:cursor-not-allowed;
+  }
+
+  .card {
+    @apply bg-gray-900 border border-gray-800 rounded-xl p-6;
+  }
+
+  .input {
+    @apply bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 w-full text-gray-100 placeholder-gray-500 focus:outline-none focus:border-neon transition-colors;
+  }
+
+  .badge-pending {
+    @apply inline-flex items-center gap-1 bg-yellow-500/10 text-yellow-400 border border-yellow-500/30 text-xs font-semibold px-2 py-1 rounded-full;
+  }
+
+  .badge-released {
+    @apply inline-flex items-center gap-1 bg-neon/10 text-neon border border-neon/30 text-xs font-semibold px-2 py-1 rounded-full;
+  }
+
+  .badge-cancelled {
+    @apply inline-flex items-center gap-1 bg-red-500/10 text-red-400 border border-red-500/30 text-xs font-semibold px-2 py-1 rounded-full;
+  }
+}
